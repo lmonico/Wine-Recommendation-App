@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout'; //used for responsive n
 import {MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule} from "@angular/material";
 import { UsersComponent } from './users/users.component';
 import { NavbarComponent } from "./navbar/navbar.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NavbarComponent } from "./navbar/navbar.component";
     MatSidenavModule,
     MatButtonModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
