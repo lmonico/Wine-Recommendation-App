@@ -10,12 +10,14 @@ import {MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatTool
 import { UsersComponent } from './users/users.component';
 import { NavbarComponent } from "./navbar/navbar.component";
 import {FormsModule} from "@angular/forms";
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    UsersComponent
+    UsersComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
