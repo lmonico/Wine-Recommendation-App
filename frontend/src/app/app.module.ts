@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FlexLayoutModule } from '@angular/flex-layout'; //used for responsive nav-bar
-import {MatButtonModule, MatListModule, MatSidenavModule, MatToolbarModule} from "@angular/material";
+import {MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule} from "@angular/material";
 import { UsersComponent } from './users/users.component';
 import { NavbarComponent } from "./navbar/navbar.component";
 
@@ -24,7 +24,8 @@ import { NavbarComponent } from "./navbar/navbar.component";
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
