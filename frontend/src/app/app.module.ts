@@ -7,10 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FlexLayoutModule } from '@angular/flex-layout'; //used for responsive nav-bar
 import {MatButtonModule, MatListModule, MatSidenavModule, MatToolbarModule} from "@angular/material";
+import { UsersComponent } from './users/users.component';
+import { NavbarComponent } from "./navbar/navbar.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
