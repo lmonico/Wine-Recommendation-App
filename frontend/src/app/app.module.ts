@@ -11,13 +11,15 @@ import { UsersComponent } from './users/users.component';
 import { NavbarComponent } from "./navbar/navbar.component";
 import {FormsModule} from "@angular/forms";
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     UsersComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
