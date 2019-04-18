@@ -13,6 +13,7 @@ import {FormsModule} from "@angular/forms";
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     UsersComponent,
     UserDetailComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
