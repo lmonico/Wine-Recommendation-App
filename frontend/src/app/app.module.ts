@@ -12,6 +12,7 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import {FormsModule} from "@angular/forms";
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NavbarComponent,
     UsersComponent,
     UserDetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
