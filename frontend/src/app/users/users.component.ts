@@ -11,7 +11,6 @@ import { UserService } from "../user.service";
 export class UsersComponent implements OnInit {
 
   users: User[];
-  selectedUser: User;
   //give users access to user service
   constructor(private userService: UserService) { }
 
@@ -21,10 +20,6 @@ export class UsersComponent implements OnInit {
 //asynchronous call to get list of users!
   getUsers(): void {
     this.userService.getUsers().subscribe(users => this.users = users);
-  }
-
-  onSelect(user: User): void{
-    this.selectedUser = user;
   }
 
 }
