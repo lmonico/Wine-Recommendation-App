@@ -3,7 +3,6 @@ import { User } from "../user";
 import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 import { UserService } from "../user.service";
-import { MatButton } from "@angular/material";
 
 @Component({
   selector: 'app-user-detail',
