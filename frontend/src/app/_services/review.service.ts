@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Review } from "./review";
+import { Review } from "../_models/review";
 
 
 @Injectable({

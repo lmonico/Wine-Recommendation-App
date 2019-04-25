@@ -1,4 +1,4 @@
-import {User} from "./user"
+import {User} from "./_models/user"
 import {REVIEWS} from "./mock-reviews";
 
 export const USERS: User[] = [

@@ -1,4 +1,4 @@
-import {Review} from "./review";
+import {Review} from "./_models/review";
 
 export const REVIEWS: Review[] = [
   {id: 123, country: "USA", description: "Temp",
