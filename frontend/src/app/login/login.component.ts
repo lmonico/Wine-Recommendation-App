@@ -1,5 +1,5 @@
 import { FormBuilder, FormGroup, Validators } from  '@angular/forms';
-import {ActivatedRoute, Router} from '@angular/router';
+import { Router} from '@angular/router';
 import { User } from '../_models/user';
 import { AuthService } from  '../_services/auth.service';
 import {Component, OnInit} from "@angular/core";
@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
   get formControls() { return this.loginForm.controls; }
 
   login(){
+    console.log("Got to login!"); //these aren't being printed
     console.log(this.loginForm.value);
     this.isSubmitted = true;
     if(this.loginForm.invalid){
