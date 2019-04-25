@@ -1,11 +1,18 @@
 <h1>Login</h1>
-<form [formGroup]="loginForm" (ngSubmit)="onSumbit()">
-  <div class="form-group">
-    <label for="username">Username</label>
-    <input type="text" formControlName="username" class="form-control">
-    <div *ngIf="this.loginForm.controls.username.errors.required">Username is required</div>
-  </div>
-  <div class="form-group">
-    <mat-button-toggle class="btn btn-primary">Login</mat-button-toggle>
-  </div>
-</form>
+<div class="login">
+  <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+      <input type="username" placeholder="Username" formControlName="username">
+    </p>
+
+    <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+      <div *ngIf="formControls.email.errors.required">Username is required</div>
+    </div>
+
+    <p>
+      <input type="submit" value="Log in">
+      <!--<mat-button-toggle class="btn btn-primary">Login</mat-button-toggle>-->
+    </p>
+  </form>
+</div>
