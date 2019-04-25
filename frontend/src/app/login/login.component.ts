@@ -4,6 +4,9 @@ import { User } from '../_models/user';
 import { AuthService } from  '../_services/auth.service';
 import {Component, OnInit} from "@angular/core";
 
+//some code provided by
+//https://www.techiediaries.com/angular-tutorial-reactive-forms/
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
