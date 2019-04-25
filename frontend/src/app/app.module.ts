@@ -15,6 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     DashboardComponent,
     HomeComponent,
     AboutComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
