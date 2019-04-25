@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormBuilder, Form, Validators} from "@angular/forms";
-import {ActivatedRoute, Router} from "@angular/router";
+import { FormBuilder, FormGroup, Validators } from  '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+import { User } from '../_models/user';
+import { AuthService } from  '../_services/auth.service';
+import {Component, OnInit} from "@angular/core";
 
 @Component({
   selector: 'app-login',
@@ -9,11 +11,11 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  returnUrl: string;
+  isSubmitted = false;
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
+    private authService: AuthService,
     private router: Router
   ) { }
 
@@ -21,20 +23,16 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required]
     });
-
-    //reset login
-
-    //get return url from route parameter or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
+  get formControls() { return this.loginForm.controls; }
 
-  onSumbit(){
-
+  login(){
+    console.log(this.loginForm.value);
+    this.isSubmitted = true;
     if(this.loginForm.invalid){
       return;
     }
-
-    //check database for user
+    this.authService.login(this.loginForm.value);
   }
 }
