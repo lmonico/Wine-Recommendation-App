@@ -23,6 +23,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { LoginComponent } from './login/login.component';
+import { ReviewDetailComponent } from './review-detail/review-detail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     AboutComponent,
     ReviewsComponent,
-    LoginComponent
+    LoginComponent,
+    ReviewDetailComponent
   ],
   imports: [
     BrowserModule,
