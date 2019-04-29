@@ -13,4 +13,8 @@ export class ReviewService {
   getReview(id: number): Observable<Review>{
     return of(REVIEWS.find(review => review.id === id));
   }
+
+  getReviews(): Observable<Review[]>{
+    return of(REVIEWS);
+  }
 }
