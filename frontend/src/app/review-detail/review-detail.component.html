@@ -1,3 +1,9 @@
 <div *ngIf="review">
-  <h2> {{review.title}} </h2>
+  <h2>Details about {{review.title}} </h2>
+  <!-- format as table to make most neat, may have empty values -->
+  <p>Review: {{review.description}}</p>
+</div>
+<div>
+  <h3>Wine Recommendations</h3>
+  <p>Render 3 wines here</p>
 </div>
