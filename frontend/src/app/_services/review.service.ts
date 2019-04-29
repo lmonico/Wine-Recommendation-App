@@ -9,7 +9,7 @@ import {Observable, of} from "rxjs";
 export class ReviewService {
 
   constructor() { }
-
+  //will need to change to get real reviews from DB
   getReview(id: number): Observable<Review>{
     return of(REVIEWS.find(review => review.id === id));
   }

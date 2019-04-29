@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from "../_models/user";
 import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";

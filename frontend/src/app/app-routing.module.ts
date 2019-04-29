@@ -6,13 +6,15 @@ import { UserDetailComponent } from "./user-detail/user-detail.component";
 import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
 import {LoginComponent} from "./login/login.component";
+import {ReviewDetailComponent} from "./review-detail/review-detail.component";
 
 const routes: Routes = [ { path: 'users', component: UsersComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: '', component: HomeComponent },
-  { path: 'detail/:id', component: UserDetailComponent },
+  { path: 'userdetail/:id', component: UserDetailComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'login', component: LoginComponent }];
+  { path: 'login', component: LoginComponent },
+  { path: 'reviewdetail/:id', component: ReviewDetailComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
