@@ -9,7 +9,7 @@ import {ReviewService} from "../_services/review.service";
 })
 export class ReviewsComponent implements OnInit {
   reviews: Review[];
-  columnsToDisplay = ['variety','title'];
+  columnsToDisplay = ['title','variety', 'price', 'points', 'country','link'];
 
   constructor(private reviewService: ReviewService) { }
 
