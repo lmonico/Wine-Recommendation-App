@@ -11,7 +11,7 @@ import {
   MatButtonToggleModule,
   MatIconModule,
   MatListModule,
-  MatSidenavModule, MatTableModule,
+  MatSidenavModule, MatSortModule, MatTableModule,
   MatToolbarModule
 } from "@angular/material";
 import { UsersComponent } from './users/users.component';
@@ -51,7 +51,8 @@ import { ReviewDetailComponent } from './review-detail/review-detail.component';
     FormsModule,
     ReactiveFormsModule,
     MatButtonToggleModule,
-    MatTableModule
+    MatTableModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
