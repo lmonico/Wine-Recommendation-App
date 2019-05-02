@@ -1,3 +1,7 @@
+<div>
+  <h2> Explore Wine Reviews </h2>
+  <a routerLink="../reviews/" mat-button> Click Here </a>
+</div>
 <h3>Top Users</h3>
 <div class="grid grid-pad">
   <a *ngFor="let user of users" class="col-1-4" routerLink="/userdetail/{{user.id}}">
@@ -5,8 +9,4 @@
       <h4>{{user.name}}</h4>
     </div>
   </a>
-</div>
-<div>
-  <h2> Explore Wine Reviews </h2>
-  <a routerLink="../reviews/" mat-button> Click Here </a>
 </div>
