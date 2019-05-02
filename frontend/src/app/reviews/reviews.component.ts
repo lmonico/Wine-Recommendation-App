@@ -22,7 +22,7 @@ export class ReviewsComponent implements OnInit {
   getReviews(): void{
     //get reviews from review service
     this.reviewService.getReviews().subscribe(reviews => this.reviews = reviews);
-    //update table datasource with data
+    //update table datasource with reviews
     this.dataSource = new MatTableDataSource(this.reviews);
   }
 }
