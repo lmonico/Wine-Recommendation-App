@@ -1,9 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { User } from "../user";
+import { Component, OnInit } from '@angular/core';
+import { User } from "../_models/user";
 import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
-import { UserService } from "../user.service";
-import { MatButton } from "@angular/material";
+import { UserService } from "../_services/user.service";
 
 @Component({
   selector: 'app-user-detail',
