@@ -1,6 +1,11 @@
 <div>
   <h2> Explore Wine Reviews </h2>
-  <a routerLink="../reviews/" mat-button> Click Here </a>
+  <p> Please hit enter before hitting search </p>
+  <input #searchText (keyup.enter)="search(searchText.value)"
+         (blur)="search(searchText.value)">
+  <p>{{searchText.value}}</p>
+  <a [href]=""></a>
+  <a [href]=query mat-button> Search </a>
 </div>
 <h3>Top Users</h3>
 <div class="grid grid-pad">
