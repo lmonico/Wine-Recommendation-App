@@ -13,4 +13,5 @@ export class Review{
   title: string;
   variety: string;
   winery: string;
+  recommendations: Review[];
 }
