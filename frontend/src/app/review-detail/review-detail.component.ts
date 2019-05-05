@@ -22,7 +22,6 @@ export class ReviewDetailComponent implements OnInit {
   dataSource;
   ngOnInit() {
     this.getReview();
-    this.dataSource.sort = this.sort;
   }
 
   getReview(): void {
