@@ -39,7 +39,7 @@ db.once('open', function() {
 
   // Error no id
   router.get('/', function(req, res, next) {
-      res.status(400).send('Please specify a reveiw id.')
+      res.status(400).send('Please specify a reveiw id.');
   });
   
   // GET wine review
@@ -48,7 +48,15 @@ db.once('open', function() {
     Review.findById(id, function (err, review) {
         if (err) return console.error(err);
         res.send(review);
-    })
+    });
+  });
+
+  router.delete('/:id', function(req, res, next) {
+    var id = req.params.id;
+    Review.findByIdAndDelete(id, function(err) {
+        if (err) return console.error(err);
+        res.send(`Deleted review ${id}`);
+    });
   });
 });
 
