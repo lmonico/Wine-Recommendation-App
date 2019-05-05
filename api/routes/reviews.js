@@ -53,9 +53,9 @@ db.once('open', function() {
 
   router.delete('/:id', function(req, res, next) {
     var id = req.params.id;
-    Review.findByIdAndDelete(id, function(err) {
+    Review.findByIdAndDelete(id, function(err, review) {
         if (err) return console.error(err);
-        res.send(`Deleted review ${id}`);
+        res.send(`Deleted review: ${review}`);
     });
   });
 });
