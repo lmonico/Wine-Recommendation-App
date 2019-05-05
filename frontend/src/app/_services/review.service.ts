@@ -14,7 +14,9 @@ export class ReviewService {
     return of(REVIEWS.find(review => review.id === id));
   }
 
-  getReviews(): Observable<Review[]>{
+  getReviews(searchText: string): Observable<Review[]>{
+    //construct HTTP request with searchText variable
+    searchText;
     return of(REVIEWS);
   }
 }

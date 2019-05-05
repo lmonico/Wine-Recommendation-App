@@ -28,7 +28,7 @@ export class ReviewsComponent implements OnInit {
     this.searchText = this.route.snapshot.paramMap.get('searchText');
     //TO DO pass searchtext to review service, need to update getReviews method
     //get reviews from review service
-    this.reviewService.getReviews().subscribe(reviews => this.reviews = reviews);
+    this.reviewService.getReviews(this.searchText).subscribe(reviews => this.reviews = reviews);
     //update table datasource with reviews
     this.dataSource = new MatTableDataSource(this.reviews);
   }
