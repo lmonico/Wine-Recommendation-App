@@ -1,6 +1,6 @@
 <div>
   <h2> Explore Wine Reviews </h2>
-  <p> Please hit enter before hitting search </p>
+  <p> Please press enter before clicking search </p>
   <input #searchText (keyup.enter)="search(searchText.value)"
          (blur)="search(searchText.value)">
   <a [href]=query mat-button> Search </a>
