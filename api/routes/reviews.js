@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
@@ -9,11 +11,12 @@ db.once('open', function() {
     console.log('Connected');
 })
 
-/* GET users listing. */
+// Error on no id
 router.get('/', function(req, res, next) {
-  res.send('Error: Please specify wine.');
+  res.status(404).send('Error: Please specify wine.');
 });
 
+// Get wine review
 router.get('/:id', function(req, res, next) {
     res.send(req.params.id);
 });
