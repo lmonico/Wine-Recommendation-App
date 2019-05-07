@@ -16,7 +16,7 @@ const routes: Routes = [ { path: 'users', component: UsersComponent },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'reviewdetail/:id', component: ReviewDetailComponent },
-  { path: 'reviews', component: ReviewsComponent }];
+  { path: 'reviews/:searchText', component: ReviewsComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

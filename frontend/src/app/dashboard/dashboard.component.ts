@@ -9,11 +9,16 @@ import { UserService } from '../_services/user.service';
 })
 export class DashboardComponent implements OnInit {
   users: User[] = [];
-
+  query: string;
   constructor(private userService: UserService) { }
 
   ngOnInit() {
     this.getUsers();
+  }
+
+  search(searchText: string): void {
+    //do something
+    this.query = "../reviews/" + searchText;
   }
 
   getUsers(): void {

@@ -1,4 +1,4 @@
-<div *ngIf="review">
+<div *ngIf="review" class="review">
   <h2>Details about {{review.title}} </h2>
   <!-- format as table to make most neat, may have empty values -->
   <p>variety: {{review.variety}}</p>
@@ -15,5 +15,34 @@
 </div>
 <div>
   <h3>Wine Recommendations</h3>
-  <p>TODO Render 3 wines here</p>
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <ng-container matColumnDef="link">
+      <th mat-header-cell *matHeaderCellDef> View More Details </th>
+      <td mat-cell *matCellDef="let review">
+        <a href="../reviewdetail/{{review.id}}" mat-button> Learn More </a>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="points">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Points </th>
+      <td mat-cell *matCellDef="let review">{{review.points}}</td>
+    </ng-container>
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+      <td mat-cell *matCellDef="let review">{{review.price}}</td>
+    </ng-container>
+    <ng-container matColumnDef="country">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Country </th>
+      <td mat-cell *matCellDef="let review">{{review.country}}</td>
+    </ng-container>
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+      <td mat-cell *matCellDef="let review">{{review.title}}</td>
+    </ng-container>
+    <ng-container matColumnDef="variety">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Variety </th>
+      <td mat-cell *matCellDef="let review">{{review.variety}}</td>
+    </ng-container>
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let review; columns: columnsToDisplay;"></tr>
+  </table>
 </div>
