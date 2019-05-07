@@ -28,6 +28,8 @@ db.once('open', function() {
     variety: String,
     winery: String
   });
+
+  reviewSchema.index({'$**': 'text'});
   
   reviewSchema.plugin(autoIncremnet.plugin, {
     model: 'Reveiw',
@@ -42,6 +44,14 @@ db.once('open', function() {
       res.status(400).send('Please specify a reveiw id.');
   });
   
+  router.get('/search/', function(req, res, next) {
+    var searchBody = req.body.search_text;
+    var found = Review.find( {$text: {$search: `\"${searchBody}\"`}}, function(err, docs) {
+      if (err) return console.error(err);
+      res.send(docs);
+    });
+  });
+
   // GET wine review
   router.get('/:id', function(req, res, next) {
     var id = req.params.id;
