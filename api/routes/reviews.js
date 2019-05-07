@@ -42,6 +42,11 @@ db.once('open', function() {
       res.status(400).send('Please specify a reveiw id.');
   });
   
+  router.get('/search/', function(req, res, next) {
+    var searchBody = req.body.search_text;
+    res.send(searchBody);
+  });
+
   // GET wine review
   router.get('/:id', function(req, res, next) {
     var id = req.params.id;
