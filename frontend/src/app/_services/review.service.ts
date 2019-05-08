@@ -14,7 +14,7 @@ export class ReviewService {
   //will need to change to get real reviews from DB
   getReview(id: number): Observable<Review>{
     this.reviewLink = `http://127.0.0.1:3000/reviews/${id}`;
-    console.log("I'm in the get review function");
+    //console.log("I'm in the get review function");
     //TODO test getting single review
     return this.http.get<Review>(this.reviewLink);
     //return of(REVIEWS.find(review => review.id === id));

@@ -15,7 +15,7 @@ const routes: Routes = [ { path: 'users', component: UsersComponent },
   { path: 'userdetail/:id', component: UserDetailComponent },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'reviewdetail/:id', component: ReviewDetailComponent },
+  { path: 'reviews/reviewdetail/:id', component: ReviewDetailComponent },
   { path: 'reviews/:searchText', component: ReviewsComponent }];
 
 @NgModule({

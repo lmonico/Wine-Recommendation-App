@@ -1,17 +1,18 @@
 export class Review{
-  id: number;
-  country: string;
-  description: string;
-  designation: string;
+  _id: number;
   points: number;
-  price: number;
-  province: string;
-  region_1: string;
-  region_2: string;
+  title: string;
+  description: string;
   taster_name: string;
   taster_twitter_handle: string;
-  title: string;
+  price: number;
+  designation: string;
   variety: string;
+  region_1: string;
+  region_2: string;
+  province: string;
+  country: string;
   winery: string;
+  id: number;
   recommendations: Review[];
 }
