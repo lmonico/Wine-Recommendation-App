@@ -9,7 +9,7 @@ Start MongoDB server in terminal with: mongod
 
 Import dataset into MongoDB with MongoDB server still running: 
 
-mongoimport --db big-wine --collection reviews --type json --file “your directory path”/mongo_export.json 
+mongoimport --db big-wine --collection reviews --jsonArray --file “your directory path”/mongo_export.json 
 
 Install node.js and npm from https://nodejs.org/en/  
 
