@@ -14,5 +14,5 @@ export class Review{
   country: string;
   winery: string;
   id: number;
-  recommendations: Review[];
+  similar_wines: Review[];
 }
