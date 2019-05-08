@@ -62,10 +62,12 @@ db.once('open', function() {
 
   // Error no id
   router.get('/', function(req, res, next) {
-      res.status(400).send('Please specify a reveiw id.');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.status(400).send('Please specify a reveiw id.');
   });
   
   router.post('/search/', function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     var searchBody = req.body.search_text;
     var found = Review.find( {$text: {$search: `\"${searchBody}\"`}}, function(err, docs) {
       if (err) return console.error(err);
@@ -75,6 +77,7 @@ db.once('open', function() {
 
   // GET wine review
   router.get('/:id', function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     var id = req.params.id;
     Review.findById(id, function (err, review) {
         if (err) return console.error(err);
@@ -83,6 +86,7 @@ db.once('open', function() {
   });
 
   router.delete('/:id', function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     var id = req.params.id;
     Review.findByIdAndDelete(id, function(err, review) {
         if (err) return console.error(err);
