@@ -46,6 +46,7 @@ db.once('open', function() {
     variety: String,
     winery: String,
     id: Number,
+    _id: Number,
     similar_wines: [EmbeddedReviewSchema]
   });
 
