@@ -13,6 +13,23 @@ db.on('error', console.error.bind(console, 'connectionerror: '));
 db.once('open', function() {
   autoIncremnet.initialize(db);
 
+  var EmbeddedReviewSchema = new mongoose.Schema({
+    country: String,
+    description: String,
+    designation: String,
+    points: Int32,
+    price: String,
+    province: String,
+    region_1: String,
+    region_2: String,
+    taster_name: String,
+    taster_twitter_handle: String,
+    title: String,
+    variety: String,
+    winery: String,
+    id: Number
+  });
+
   var reviewSchema = new mongoose.Schema({
     country: String,
     description: String,
@@ -26,7 +43,9 @@ db.once('open', function() {
     taster_twitter_handle: String,
     title: String,
     variety: String,
-    winery: String
+    winery: String,
+    id: Number,
+    similar_wines: [EmbeddedReviewSchema]
   });
 
   reviewSchema.index({'$**': 'text'});
