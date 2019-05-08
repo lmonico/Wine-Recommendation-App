@@ -44,7 +44,7 @@ db.once('open', function() {
       res.status(400).send('Please specify a reveiw id.');
   });
   
-  router.get('/search/', function(req, res, next) {
+  router.post('/search/', function(req, res, next) {
     var searchBody = req.body.search_text;
     var found = Review.find( {$text: {$search: `\"${searchBody}\"`}}, function(err, docs) {
       if (err) return console.error(err);
