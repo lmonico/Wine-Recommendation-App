@@ -23,7 +23,8 @@ export class ReviewService {
   getReviews(searchText: string): Observable<Review[]>{
     //construct HTTP request with searchText variable
     //TODO check this search works can't have body in get, only post!
-    return this.http.post<Review[]>('http://127.0.0.1:3000/reviews/search/',searchText);
+    var body = {"search_text": `${searchText}`};
+    return this.http.post<Review[]>('http://127.0.0.1:3000/reviews/search/',body);
     //searchText;
     //return of(REVIEWS);
   }
