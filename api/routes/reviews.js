@@ -27,7 +27,8 @@ db.once('open', function() {
     title: String,
     variety: String,
     winery: String,
-    id: Number
+    id: Number,
+    _id: Number
   });
 
   var reviewSchema = new mongoose.Schema({
