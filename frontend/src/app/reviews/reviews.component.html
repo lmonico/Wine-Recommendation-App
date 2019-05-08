@@ -1,11 +1,10 @@
 <h2>Relevant Reviews Containing: {{searchText}}</h2>
-<h3> {{reviews[0].title}} works! </h3>
 <div>
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
     <ng-container matColumnDef="link">
       <th mat-header-cell *matHeaderCellDef> View More Details </th>
       <td mat-cell *matCellDef="let review">
-        <a routerLink="../reviewdetail/{{review.id}}" mat-button> Learn More </a>
+        <a routerLink="../reviewdetail/{{review._id}}" mat-button> Learn More </a>
       </td>
     </ng-container>
     <ng-container matColumnDef="points">
