@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout'; //used for responsive nav-bar
 import {
   MatButtonModule,
-  MatButtonToggleModule,
+  MatButtonToggleModule, MatCardModule,
   MatIconModule,
   MatListModule,
   MatSidenavModule, MatSortModule, MatTableModule,
@@ -42,6 +43,7 @@ import { ReviewDetailComponent } from './review-detail/review-detail.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    MatPaginatorModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
@@ -54,7 +56,8 @@ import { ReviewDetailComponent } from './review-detail/review-detail.component';
     ReactiveFormsModule,
     MatButtonToggleModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {Review} from "../_models/review";
 import {ReviewService} from "../_services/review.service";
-import {MatSort, MatTableDataSource, MatTab} from "@angular/material";
+import {MatSort, MatTableDataSource, MatTab, MatPaginator} from "@angular/material";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
@@ -14,6 +14,7 @@ export class ReviewsComponent implements OnInit {
   searchText: string;
   columnsToDisplay = ['title','variety', 'price', 'points', 'country','link'];
   @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   constructor(
     private reviewService: ReviewService,
     private route: ActivatedRoute
@@ -31,6 +32,7 @@ export class ReviewsComponent implements OnInit {
       this.reviews = reviews;
       this.dataSource = new MatTableDataSource(this.reviews);
       this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
     });
   }
 }
