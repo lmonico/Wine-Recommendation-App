@@ -22,10 +22,10 @@ print(length)
 with open('./temp.csv','w') as myfile:
     wr = csv.writer(myfile)
     print('here3')
-    b = [[0 for x in range(10000)] for y in range(10000)]
+    b = [[0 for x in range(500)] for y in range(500)]
     print('here34')
-    for i in range(10000):
-        for j in range(10000):
+    for i in range(500):
+        for j in range(500):
             b[i][j] = 1 - distance.cosine(a[i],a[j])
         wr.writerow(b[i])
         # if(i % 10 == 0):
