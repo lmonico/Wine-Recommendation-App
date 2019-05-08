@@ -25,6 +25,7 @@ export class ReviewDetailComponent implements OnInit {
   }
 
   getReview(): void {
+    console.log("I'm in the get review function in review detail component");
     const id = +this.route.snapshot.paramMap.get('id');
     this.reviewService.getReview(id).subscribe(review => this.review = review);
     this.dataSource = new MatTableDataSource(this.review.recommendations);
