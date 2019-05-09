@@ -1,17 +1,19 @@
 <div *ngIf="review" class="review">
-  <h2>Details about {{review.title}} </h2>
-  <!-- format as table to make most neat, may have empty values -->
-  <p>variety: {{review.variety}}</p>
-  <p>country: {{review.country}} province: {{review.province}} region_1: {{review.region_1}} region_2: {{review.region_2}}</p>
-  <p>review: {{review.description}}</p>
-  <p>taster name: {{review.taster_name}}</p>
-  <p>points: {{review.points}}</p>
-  <p>price: {{review.price}}</p>
-  <p>designation: {{review.designation}}</p>
-  <p>title: {{review.title}}</p>
-  <p>winery: {{review.winery}}</p>
-  <p></p>
-  <a (click)="goBack()" mat-button>go back</a>
+  <mat-card>
+    <h2>Details about {{review.title}} </h2>
+    <!-- format as table to make most neat, may have empty values -->
+    <p>variety: {{review.variety}}</p>
+    <p>country: {{review.country}} province: {{review.province}} region_1: {{review.region_1}} region_2: {{review.region_2}}</p>
+    <p>review: {{review.description}}</p>
+    <p>taster name: {{review.taster_name}}</p>
+    <p>points: {{review.points}}</p>
+    <p>price: {{review.price}}</p>
+    <p>designation: {{review.designation}}</p>
+    <p>title: {{review.title}}</p>
+    <p>winery: {{review.winery}}</p>
+    <p></p>
+    <a (click)="goBack()" mat-button>go back</a>
+  </mat-card>
 </div>
 <div>
   <h3>Wine Recommendations</h3>
