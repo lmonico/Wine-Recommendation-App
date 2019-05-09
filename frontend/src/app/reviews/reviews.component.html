@@ -1,5 +1,5 @@
 <h2>Relevant Reviews Containing: {{searchText}}</h2>
-<div>
+<mat-card>
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
     <ng-container matColumnDef="link">
       <th mat-header-cell *matHeaderCellDef> View More Details </th>
@@ -30,4 +30,6 @@
     <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
     <tr mat-row *matRowDef="let review; columns: columnsToDisplay;"></tr>
   </table>
-</div>
+  <mat-paginator [pageSize]="15" [pageSizeOptions]="[15,30,45]" showFirstLastButtons>
+  </mat-paginator>
+</mat-card>
